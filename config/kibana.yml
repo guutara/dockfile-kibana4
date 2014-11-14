@@ -2,7 +2,7 @@
 port: 5601
 
 # The Elasticsearch instance to use for all your queries
-elasticsearch: "http://192.168.59.103:9200"
+elasticsearch: "http://$ES-HOST:9200"
 
 # Kibana uses an index in Elasticsearch to store saved searches, visualizations
 # and dashboards. It will create an new index if it doesn't already exist.
