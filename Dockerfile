@@ -14,6 +14,8 @@ RUN \
   rm -f kibana-4.0.0-BETA2tar.gz && \
   mv /tmp/kibana-4.0.0-BETA2 /kibana
 
+#ENV
+ENV ES-HOST "localhost"
 
 # Define mountable directories.
 #VOLUME ["/data"]
