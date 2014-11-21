@@ -14,20 +14,23 @@ RUN \
   rm -f kibana-4.0.0-BETA2tar.gz && \
   mv /tmp/kibana-4.0.0-BETA2 /kibana
 
-#ENV
-ENV ES-HOST "localhost"
+#Set ENV
+#ENV 
 
 # Define mountable directories.
-#VOLUME ["/data"]
+#VOLUME [""]
 
 # Mount elasticsearch.yml config
 ADD config/kibana.yml /kibana/config/kibana.yml
 
 # Define working directory.
-#WORKDIR /data
+#WORKDIR
+
+# Define default ENTRYPOINT
+ENTRYPOINT ["/kibana/bin/kibana"]
 
 # Define default command.
-CMD ["/kibana/bin/kibana"]
+#CMD [""]
 
 # Expose ports.
 #   - 5601: HTTP
